@@ -1,0 +1,341 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+/* ----------------- Header ---------------------- */
+
+.header {
+    line-height: 1;
+    padding: 50px 15px 55px;
+    background: linear-gradient(
+            0deg,
+            rgba(111, 119, 123, 0.41),
+            rgba(111, 119, 123, 0.41)
+        ),
+        url("./../img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.header__title {
+    min-width: 600px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 22px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.header__value {
+    min-width: 600px;
+    font-size: 42px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+.header__info {
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.header__info:last-child {
+    margin-bottom: 0;
+}
+
+.info-box {
+    width: 420px;
+    height: 50px;
+    background: #727272;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.info-box--income {
+    background: #2fcc81;
+}
+.info-box--expenses {
+    background: #dd5151;
+}
+.info-box__title {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.info-box__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: left;
+}
+.info-box__value {
+    font-size: 20px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.info-box__value:not(:last-child) {
+    margin-right: 15px;
+}
+.info-box__percents {
+    width: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 4px 5px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.badge.badge--dark {
+    background-color: rgba(221, 81, 81, 0.2);
+    color: #dd5151;
+}
+/* ----------------- Form ---------------------- */
+
+.form-wrapper {
+    padding: 22px 15px;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+.form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form__select {
+}
+.form__input {
+    font-family: "Open Sans", sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    height: 50px;
+
+    font-size: 16px;
+    line-height: 1;
+    line-height: 22px;
+    color: #000000;
+}
+
+.form__input:not(:last-child) {
+    margin-right: 10px;
+}
+.form__input--description {
+    width: 350px;
+}
+.form__input--sum {
+    width: 120px;
+}
+.form__button {
+    width: 160px;
+    height: 50px;
+    background: #000000;
+    border: none;
+    border-radius: 4px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.form__button:hover {
+    background-color: rgba(0, 0, 0, 0.753);
+}
+
+.form__button-icon {
+    margin-left: 10px;
+}
+
+/* ----------------- Table ---------------------- */
+
+.budget-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.budget__col {
+    width: 500px;
+}
+
+.budget__col:not(:last-child) {
+    margin-right: 30px;
+}
+
+.title {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.title--income {
+    color: #23a868;
+}
+.budget-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.budget-list__item {
+    background: #f5f5f5;
+}
+.budget-list__item:nth-child(even) {
+    background-color: #fdfdfd;
+}
+.item {
+    
+    height: 65px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item__title {
+    font-size: 18px;
+    line-height: 1;
+    color: #000000;
+}
+.item__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* transition: all 0.2s ease-in; */
+}
+.item__amount {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #23a868;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.item--expense .item__amount {
+    color: #dd5151;
+}
+
+.item__badge {
+    padding-left: 10px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.item__remove {
+    display: none;
+    /* margin-left: 15px; */
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.item:hover .item__amount {
+    transform: translateX(-10px);
+}
+
+.item:hover .item__remove {
+    display: block;
+}
+
+.title--expenses {
+    color: #dd5151;
+}
+
+
+/* -------------------- Media ------------------------------- */
+
+@media (max-width: 840px) {
+    .header__title,
+    .header__value {
+        min-width: auto;
+        width: 100%;
+    }
+    .header__value {
+        font-size: 34px;
+    }
+    .info-box {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto;
+        max-width: 420px;
+    }
+    .info-box__title {
+        font-size: 16px;
+    }
+    .info-box__value {
+        font-size: 18px;
+    }
+    .info-box__value:not(:last-child) {
+        margin-right: 10px;
+    }
+    .info-box__percents {
+        width: 50px;
+    }
+    .form {
+        width: 100%;
+        flex-direction: column;
+    }
+    .form > * {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0 !important;
+    }
+    .form > *:last-child {
+        margin-bottom: 0;
+    }
+    .form__button {
+        text-align: center;
+        justify-content: center;
+    }
+    .budget-section{
+        padding-top: 35px;
+    }
+    .budget-section {
+        flex-direction: column;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .budget__col {
+        width: 100%;
+    }
+    .budget__col:not(:last-child) {
+        margin-bottom: 35px;
+    }
+}
